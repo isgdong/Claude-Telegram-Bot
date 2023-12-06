@@ -6,7 +6,7 @@ from config import claude_api
 class Claude:
     def __init__(self):
         self.model = "claude-2.1"
-        self.temperature = 0.7
+        self.temperature = 0.5
         self.cutoff = 50
         self.client = AsyncAnthropic(api_key=claude_api)
         self.prompt = ""
@@ -18,7 +18,7 @@ class Claude:
         self.prompt = self.prompt[: self.prompt.rfind(HUMAN_PROMPT)]
 
     def change_model(self, model):
-        valid_models = {"claude-2", "claude-instant-1"}
+        valid_models = {"claude-2.1", "claude-instant-1"}
         if model in valid_models:
             self.model = model
             return True

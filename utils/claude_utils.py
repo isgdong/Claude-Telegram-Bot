@@ -5,7 +5,7 @@ from config import claude_api
 
 class Claude:
     def __init__(self):
-        self.model = "claude-2"
+        self.model = "claude-2.1"
         self.temperature = 0.7
         self.cutoff = 50
         self.client = AsyncAnthropic(api_key=claude_api)

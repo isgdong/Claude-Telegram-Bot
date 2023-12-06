@@ -9,10 +9,10 @@ class Claude:
         self.temperature = 0.5
         self.cutoff = 35
         self.client = AsyncAnthropic(api_key=claude_api)
-        self.prompt = ""
+        self.prompt = "在解析问题时，需要有条不紊地思考，并在回答中清晰地列出逻辑推理和结论。分析流程应包括：明确目标、解剖问题、给出答案;在回答的最后不要总结。"
 
     def reset(self):
-        self.prompt = ""
+        self.prompt = "在解析问题时，需要有条不紊地思考，并在回答中清晰地列出逻辑推理和结论。分析流程应包括：明确目标、解剖问题、给出答案;在回答的最后不要总结。"
 
     def revert(self):
         self.prompt = self.prompt[: self.prompt.rfind(HUMAN_PROMPT)]

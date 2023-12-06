@@ -7,7 +7,7 @@ class Claude:
     def __init__(self):
         self.model = "claude-2.1"
         self.temperature = 0.5
-        self.cutoff = 50
+        self.cutoff = 35
         self.client = AsyncAnthropic(api_key=claude_api)
         self.prompt = ""
 
